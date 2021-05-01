@@ -210,8 +210,6 @@ if __name__ == '__main__':
     #--------------------------------------------------------------------------
     # Environment setup
     #--------------------------------------------------------------------------
-    import pdb
-    pdb.set_trace()
     if args.mpi:
         comm = mpi.setup_MPI()
         rank, nproc = comm.Get_rank(), comm.Get_size()
@@ -243,6 +241,8 @@ if __name__ == '__main__':
     #--------------------------------------------------------------------------
     # Load models and extract parameters
     #--------------------------------------------------------------------------
+    import pdb
+    pdb.set_trace()
     net = model_loader.load(args.dataset, args.model, args.model_file)
     w = net_plotter.get_weights(net) # initial parameters
     s = copy.deepcopy(net.state_dict()) # deepcopy since state_dict are references
