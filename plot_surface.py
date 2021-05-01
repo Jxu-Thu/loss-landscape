@@ -210,6 +210,8 @@ if __name__ == '__main__':
     #--------------------------------------------------------------------------
     # Environment setup
     #--------------------------------------------------------------------------
+    import pdb
+    pdb.set_trace()
     if args.mpi:
         comm = mpi.setup_MPI()
         rank, nproc = comm.Get_rank(), comm.Get_size()
